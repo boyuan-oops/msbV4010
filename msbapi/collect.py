@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 from msbapi.baseapi import BaseApi
 
-#关于收藏的接口，增加取消收藏，收藏列表，是否收藏
+
+# 关于收藏的接口，增加取消收藏，收藏列表，是否收藏
 class Collect(BaseApi):
 
     def add_collect(self, payload):
@@ -17,7 +18,7 @@ class Collect(BaseApi):
             "url": "https://preapi2.meishubao.com/v5/collect/add",
             "headers":
                 {'userid': '5fc5ba8171c97068bc242b72',
-            'Content-Type': 'application/x-www-form-urlencoded'
+                 'Content-Type': 'application/x-www-form-urlencoded'
                  },
             "data": payload
         }
@@ -68,10 +69,10 @@ class Collect(BaseApi):
         req = {
             "method": "post",
             "url": "https://preapi2.meishubao.com/v5/collect/iscollected",
-            "headers":{
-                    'userid': '5fc5ba8171c97068bc242b72',
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
+            "headers": {
+                'userid': '5fc5ba8171c97068bc242b72',
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
             "data": payload
         }
         response = self.send_requests(req)

@@ -26,7 +26,7 @@ class CircleList(BaseApi):
             "headers": {
                 'userid': '5fc5ba8171c97068bc242b72',
                 'Content-Type': 'application/x-www-form-urlencoded'
-                 },
+            },
             "data": payload
         }
         response = self.send_requests(req)
@@ -41,7 +41,7 @@ class CircleList(BaseApi):
             "method": "get",
             "url": f"https://preapi2.meishubao.com/v1/topic/getList?count={counts}",
             "headers": {
-            'userid': '5fc5ba8171c97068bc242b72'}
+                'userid': '5fc5ba8171c97068bc242b72'}
         }
         response = self.send_requests(req)
         return response.json()
@@ -56,7 +56,7 @@ class CircleList(BaseApi):
             "method": "post",
             "url": "https://preapi2.meishubao.com/v1/topic/deleteTopics",
             "headers": {
-            'Content-Type': 'application/x-www-form-urlencoded'},
+                'Content-Type': 'application/x-www-form-urlencoded'},
             "data": payload
         }
         response = self.send_requests(req)
